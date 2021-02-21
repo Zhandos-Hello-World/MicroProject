@@ -17,14 +17,14 @@
       <Label layoutX="214.0" layoutY="165.0" text="Telephone number:" textFill="#640c64" />
       <Label layoutX="213.0" layoutY="201.0" text="Email:" textFill="#640c64" />
       <Label layoutX="212.0" layoutY="232.0" text="Password:" textFill="#640c64" />
-      <PasswordField fx:id="passwordText" layoutX="327.0" layoutY="228.0" promptText="password" />
-      <Button layoutX="401.0" layoutY="305.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="68.0" text="Cancel" />
-      <Button fx:id="btnCreate" layoutX="480.0" layoutY="305.0" mnemonicParsing="false" onAction="#btnCreate" prefHeight="54.0" prefWidth="68.0" text="Create" />
-      <TextField fx:id="nameText" layoutX="327.0" layoutY="94.0" promptText="Name" />
-      <TextField fx:id="lastNameText" layoutX="327.0" layoutY="126.0" promptText="Last Name" />
-      <TextField fx:id="numberText" layoutX="327.0" layoutY="161.0" prefHeight="26.0" prefWidth="149.0" promptText="8(000) 000 00 00" />
-      <TextField fx:id="emailText" layoutX="327.0" layoutY="197.0" promptText="Email" />
-      <ImageView fx:id="Avatar" fitHeight="76.0" fitWidth="116.0" layoutX="91.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
+      <PasswordField fx:id="passwordText" layoutX="327.0" layoutY="228.0" promptText="password" stylesheets="@Register.css" />
+      <Button layoutX="401.0" layoutY="305.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="68.0" styleClass="btnCC" stylesheets="@Register.css" text="Cancel" />
+      <Button fx:id="btnCreate" layoutX="480.0" layoutY="305.0" mnemonicParsing="false" onAction="#btnCreate" prefHeight="54.0" prefWidth="68.0" styleClass="btnCC" stylesheets="@Register.css" text="Create" />
+      <TextField fx:id="nameText" layoutX="327.0" layoutY="94.0" promptText="Name" stylesheets="@Register.css" />
+      <TextField fx:id="lastNameText" layoutX="327.0" layoutY="126.0" promptText="Last Name" stylesheets="@Register.css" />
+      <TextField fx:id="numberText" layoutX="327.0" layoutY="161.0" prefHeight="26.0" prefWidth="149.0" promptText="8(000) 000 00 00" stylesheets="@Register.css" />
+      <TextField fx:id="emailText" layoutX="327.0" layoutY="197.0" promptText="Email" stylesheets="@Register.css" />
+      <ImageView fx:id="Avatar" fitHeight="84.0" fitWidth="111.0" layoutX="90.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@114-1149972_avatar-free-png-image-avatar-png.png" />
          </image>
@@ -40,7 +40,7 @@
             </Label>
          </children>
       </Pane>
-      <Button fx:id="addImage" layoutX="160.0" layoutY="139.0" mnemonicParsing="false" onAction="#addImage" style="-fx-background-radius: 15;" text="+" />
+      <Button fx:id="addImage" layoutX="160.0" layoutY="139.0" mnemonicParsing="false" onAction="#addImage" style="-fx-background-radius: 15;" styleClass="btnAdd" stylesheets="@Register.css" text="+" />
       <Label fx:id="labelShowName" layoutX="486.0" layoutY="98.0" prefHeight="26.0" prefWidth="84.0" />
       <Label fx:id="labelShowName2" layoutX="486.0" layoutY="126.0" prefHeight="26.0" prefWidth="84.0" />
       <Label layoutX="492.0" layoutY="201.0" prefHeight="26.0" prefWidth="68.0" />
