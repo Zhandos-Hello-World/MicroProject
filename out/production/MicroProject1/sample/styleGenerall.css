@@ -1,0 +1,14 @@
+.btnPane{
+    -fx-background-color: #202124FF;
+    -fx-text-fill: white;
+}
+.btnPane:hover{
+    -fx-background-color: #0F1011FF;
+    -fx-text-fill: #D9A3E2FF;
+}
+.VboxColor{
+    -fx-background-color: #202124FF;
+}
+.paneColor{
+    -fx-background-color: #1B1C22FF;
+}

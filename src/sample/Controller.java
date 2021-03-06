@@ -6,11 +6,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
-import javafx.fxml.FXML;
+
 
 import java.io.IOException;
 import java.net.URL;
@@ -25,7 +24,7 @@ public class Controller implements Initializable {
     private TextField usernameText;
 
     @FXML
-    private TextField passwordText;
+    private PasswordField passwordText;
 
     @FXML
     private Button btnLogin;
@@ -36,7 +35,18 @@ public class Controller implements Initializable {
 
     @FXML
     public void btnLogin(ActionEvent event){
-        System.out.println("Login");
+        try {
+            Stage stage = (Stage)cancelButton.getScene().getWindow();
+            stage.close();
+            Stage stage1 = new Stage();
+            Parent root = FXMLLoader.load(getClass().getResource("Generall.fxml"));
+            Scene scene = new Scene(root);
+            stage1.setScene(scene);
+            stage1.show();
+        }
+        catch (IOException ex){
+            ex.printStackTrace();
+        }
     }
     @FXML
     public void btnRegister(ActionEvent event){

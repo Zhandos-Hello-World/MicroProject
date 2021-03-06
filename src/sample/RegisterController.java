@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -24,7 +25,7 @@ public class RegisterController {
     @FXML
     private TextField emailText;
     @FXML
-    private TextField passwordText;
+    private PasswordField passwordText;
     @FXML
     private Button btnCreate;
     @FXML
@@ -52,17 +53,16 @@ public class RegisterController {
             location.setScene(scene1);
             location.show();
         } catch (IOException e) {
-            System.out.print("Hello world");
+            System.out.print(e.getMessage());
         }
     }
 
     @FXML
     public void btnCreate(){
         if(checkNameText(nameText.getText()) && checkLastNameText(lastNameText.getText()) && checkNumberText(numberText.getText())){
+            //This place will be loading Intro.fxml
+        }
 
-        }
-        else{
-        }
     }
 
 
@@ -115,7 +115,7 @@ public class RegisterController {
     }
 
 
-    private boolean checkNumberText(String number){
+private boolean checkNumberText(String number){
         try{
             long a = Long.parseLong(number);
             labelShowNumber1.setText("Correct");
