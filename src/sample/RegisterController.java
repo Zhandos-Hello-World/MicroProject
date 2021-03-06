@@ -53,7 +53,11 @@ public class RegisterController {
             location.setScene(scene1);
             location.show();
         } catch (IOException e) {
+<<<<<<< Updated upstream
             System.out.print(e.getMessage());
+=======
+            System.out.print("Mistake");
+>>>>>>> Stashed changes
         }
     }
 
