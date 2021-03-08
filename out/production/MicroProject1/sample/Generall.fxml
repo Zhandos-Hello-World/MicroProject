@@ -12,7 +12,8 @@
    <left>
       <VBox prefHeight="375.0" prefWidth="214.0" styleClass="VboxColor" stylesheets="@styleGenerall.css" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" prefHeight="73.0" prefWidth="213.0" styleClass="btnPane" stylesheets="@styleGenerall.css" text="Home" />
+            <Button mnemonicParsing="false" onAction="#Home" prefHeight="73.0" prefWidth="213.0" styleClass="btnPane" stylesheets="@styleGenerall.css" text="Home" />
+            <Button layoutX="10.0" layoutY="84.0" mnemonicParsing="false" onAction="#MyAccount" prefHeight="73.0" prefWidth="213.0" styleClass="btnPane" stylesheets="@styleGenerall.css" text="My Account" />
             <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="213.0" styleClass="btnPane" stylesheets="@styleGenerall.css" text="Settings" />
             <Button layoutX="10.0" layoutY="84.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="213.0" styleClass="btnPane" stylesheets="@styleGenerall.css" text="Bookmarks" />
             <Button layoutX="10.0" layoutY="157.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="213.0" styleClass="btnPane" stylesheets="@styleGenerall.css" text="Basket" />

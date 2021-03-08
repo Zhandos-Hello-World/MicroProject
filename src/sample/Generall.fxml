@@ -12,7 +12,8 @@
    <left>
       <VBox prefHeight="375.0" prefWidth="214.0" styleClass="VboxColor" stylesheets="@styleGenerall.css" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" prefHeight="73.0" prefWidth="213.0" styleClass="btnPane" stylesheets="@styleGenerall.css" text="Home" />
+            <Button mnemonicParsing="false" onAction="#Home" prefHeight="73.0" prefWidth="213.0" styleClass="btnPane" stylesheets="@styleGenerall.css" text="Home" />
+            <Button layoutX="10.0" layoutY="84.0" mnemonicParsing="false" onAction="#MyAccount" prefHeight="73.0" prefWidth="213.0" styleClass="btnPane" stylesheets="@styleGenerall.css" text="My Account" />
             <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="213.0" styleClass="btnPane" stylesheets="@styleGenerall.css" text="Settings" />
             <Button layoutX="10.0" layoutY="84.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="213.0" styleClass="btnPane" stylesheets="@styleGenerall.css" text="Bookmarks" />
             <Button layoutX="10.0" layoutY="157.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="213.0" styleClass="btnPane" stylesheets="@styleGenerall.css" text="Basket" />
@@ -20,7 +21,7 @@
       </VBox>
    </left>
    <top>
-      <AnchorPane prefHeight="0.0" prefWidth="942.0" styleClass="paneColor" stylesheets="@styleGenerall.css" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="60.0" prefWidth="942.0" styleClass="paneColor" stylesheets="@styleGenerall.css" BorderPane.alignment="CENTER">
          <children>
             <Label prefHeight="98.0" prefWidth="215.0" text="      IZI" textFill="#d9a3e2">
                <font>
@@ -33,6 +34,6 @@
       </AnchorPane>
    </top>
    <center>
-      <BorderPane fx:id="Install" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <BorderPane fx:id="Install" prefHeight="490.0" prefWidth="727.0" BorderPane.alignment="CENTER" />
    </center>
 </BorderPane>

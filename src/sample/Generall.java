@@ -16,10 +16,17 @@ public class Generall implements Initializable {
     @FXML
     private BorderPane Install;
 
-
+    @FXML
+    private void MyAccount(){
+        LoadUI("MyAccount/MyAccount");
+    }
+    @FXML
+    private void Home(){
+        LoadUI("Home/Home");
+    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        LoadUI("Home/Home");
+        Home();
     }
 
     public void LoadUI(String ui){
