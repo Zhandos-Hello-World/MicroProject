@@ -2,7 +2,10 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -10,7 +13,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RegisterController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="462.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RegisterController">
    <children>
       <Label layoutX="213.0" layoutY="97.0" prefHeight="18.0" prefWidth="42.0" text="Name:" textFill="#640c64" />
       <Label layoutX="214.0" layoutY="130.0" prefHeight="18.0" prefWidth="60.0" text="LastName:" textFill="#640c64" />
@@ -18,31 +21,52 @@
       <Label layoutX="213.0" layoutY="201.0" text="Email:" textFill="#640c64" />
       <Label layoutX="212.0" layoutY="232.0" text="Password:" textFill="#640c64" />
       <PasswordField fx:id="passwordText" layoutX="327.0" layoutY="228.0" promptText="password" stylesheets="@Register.css" />
-      <Button layoutX="401.0" layoutY="305.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="68.0" styleClass="btnCC" stylesheets="@Register.css" text="Cancel" />
-      <Button fx:id="btnCreate" layoutX="480.0" layoutY="305.0" mnemonicParsing="false" onAction="#btnCreate" prefHeight="54.0" prefWidth="68.0" styleClass="btnCC" stylesheets="@Register.css" text="Create" />
+      <Button fx:id="cancelButton" layoutX="346.0" layoutY="357.0" mnemonicParsing="false" onAction="#Cancel" prefHeight="54.0" prefWidth="68.0" style="-fx-background-radius: 15;" styleClass="btnCC" stylesheets="@Register.css" text="Cancel" />
+      <Button fx:id="btnCreate" layoutX="435.0" layoutY="357.0" mnemonicParsing="false" onAction="#btnCreate" prefHeight="54.0" prefWidth="68.0" style="-fx-background-radius: 15;" styleClass="btnCC" stylesheets="@Register.css" text="Create" />
       <TextField fx:id="nameText" layoutX="327.0" layoutY="94.0" promptText="Name" stylesheets="@Register.css" />
       <TextField fx:id="lastNameText" layoutX="327.0" layoutY="126.0" promptText="Last Name" stylesheets="@Register.css" />
       <TextField fx:id="numberText" layoutX="327.0" layoutY="161.0" prefHeight="26.0" prefWidth="149.0" promptText="8(000) 000 00 00" stylesheets="@Register.css" />
       <TextField fx:id="emailText" layoutX="327.0" layoutY="197.0" promptText="Email" stylesheets="@Register.css" />
-      <ImageView fx:id="Avatar" fitHeight="84.0" fitWidth="111.0" layoutX="90.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="Avatar" fitHeight="155.0" fitWidth="171.0" layoutX="22.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@114-1149972_avatar-free-png-image-avatar-png.png" />
          </image>
       </ImageView>
       <Label layoutX="484.0" layoutY="232.0" prefHeight="18.0" prefWidth="84.0" />
       <Label fx:id="labelShowNumber1" layoutX="486.0" layoutY="161.0" prefHeight="26.0" prefWidth="84.0" />
-      <Pane prefHeight="84.0" prefWidth="600.0" style="-fx-background-color: #1a1a1a;">
+      <Pane prefHeight="84.0" prefWidth="600.0" style="-fx-background-color: #1a1a1a;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label layoutX="216.0" layoutY="15.0" text="Register" textFill="#f29af5">
+            <Label layoutX="235.0" layoutY="15.0" text="Register" textFill="#f29af5">
                <font>
                   <Font size="37.0" />
                </font>
             </Label>
          </children>
       </Pane>
-      <Button fx:id="addImage" layoutX="160.0" layoutY="139.0" mnemonicParsing="false" onAction="#addImage" style="-fx-background-radius: 15;" styleClass="btnAdd" stylesheets="@Register.css" text="+" />
+      <Button fx:id="addImage" layoutX="136.0" layoutY="184.0" mnemonicParsing="false" onAction="#addImage" style="-fx-background-radius: 15;" styleClass="btnAdd" stylesheets="@Register.css" text="+" />
       <Label fx:id="labelShowName" layoutX="486.0" layoutY="98.0" prefHeight="26.0" prefWidth="84.0" />
       <Label fx:id="labelShowName2" layoutX="486.0" layoutY="126.0" prefHeight="26.0" prefWidth="84.0" />
       <Label layoutX="492.0" layoutY="201.0" prefHeight="26.0" prefWidth="68.0" />
+      <RadioButton fx:id="MaleRadioButton" layoutX="136.0" layoutY="290.0" mnemonicParsing="false" text="Male" textFill="#640c64" />
+      <RadioButton fx:id="FemaleRadioButton" layoutX="208.0" layoutY="290.0" mnemonicParsing="false" text="Female" textFill="#640c64" />
+      <MenuButton fx:id="day" layoutX="305.0" layoutY="286.0" mnemonicParsing="false" styleClass="btnCC" stylesheets="@Register.css" text="day">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+      </MenuButton>
+      <MenuButton fx:id="month" layoutX="367.0" layoutY="286.0" mnemonicParsing="false" styleClass="btnCC" stylesheets="@Register.css" text="month">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+      </MenuButton>
+      <MenuButton fx:id="year" layoutX="442.0" layoutY="286.0" mnemonicParsing="false" styleClass="btnCC" stylesheets="@Register.css" text="year">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+      </MenuButton>
+      <Label fx:id="messageIncorrectBirthday" layoutX="306.0" layoutY="323.0" prefHeight="18.0" prefWidth="188.0" />
    </children>
 </AnchorPane>
