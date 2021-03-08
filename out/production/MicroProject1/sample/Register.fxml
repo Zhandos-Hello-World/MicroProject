@@ -32,7 +32,7 @@
             <Image url="@114-1149972_avatar-free-png-image-avatar-png.png" />
          </image>
       </ImageView>
-      <Label layoutX="484.0" layoutY="232.0" prefHeight="18.0" prefWidth="84.0" />
+      <Label fx:id="showIncorrectPassword" layoutX="484.0" layoutY="232.0" prefHeight="18.0" prefWidth="84.0" />
       <Label fx:id="labelShowNumber1" layoutX="486.0" layoutY="161.0" prefHeight="26.0" prefWidth="84.0" />
       <Pane prefHeight="84.0" prefWidth="600.0" style="-fx-background-color: #1a1a1a;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>

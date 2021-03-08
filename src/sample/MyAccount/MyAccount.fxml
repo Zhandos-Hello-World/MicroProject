@@ -4,7 +4,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane fx:id="installA" prefHeight="472.0" prefWidth="727.0" styleClass="anchor" stylesheets="@styleMyAccount.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MyAccount.MyAccountController">
    <children>
       <Label layoutX="84.0" layoutY="236.0" prefHeight="32.0" prefWidth="46.0" text="Name" textFill="WHITE" />
@@ -18,7 +17,9 @@
       <Label layoutX="386.0" layoutY="68.0" prefHeight="32.0" prefWidth="70.0" text="Your Email:" textFill="WHITE" />
       <Label layoutX="386.0" layoutY="100.0" prefHeight="32.0" prefWidth="84.0" text="Your password:" textFill="WHITE" />
       <Button fx:id="btnShowPassword" layoutX="640.0" layoutY="103.0" mnemonicParsing="false" styleClass="btnCC" stylesheets="@../Register.css" text="show" />
-      <Label fx:id="emailLabel" layoutX="484.0" layoutY="75.0" prefHeight="18.0" prefWidth="107.0" text="unknown" textFill="WHITE" />
-      <Label fx:id="passwordLabel" layoutX="484.0" layoutY="107.0" prefHeight="18.0" prefWidth="107.0" text="unknown" textFill="WHITE" />
+      <Label fx:id="emailLabel" layoutX="484.0" layoutY="75.0" prefHeight="18.0" prefWidth="140.0" text="unknown" textFill="WHITE" />
+      <Label fx:id="passwordLabel" layoutX="484.0" layoutY="107.0" prefHeight="18.0" prefWidth="140.0" text="unknown" textFill="WHITE" />
+      <Label layoutX="84.0" layoutY="372.0" prefHeight="18.0" prefWidth="46.0" text="tel:" textFill="WHITE" />
+      <Label fx:id="telLabel" layoutX="159.0" layoutY="373.0" prefHeight="18.0" prefWidth="122.0" text="unknown" textFill="WHITE" />
    </children>
 </AnchorPane>

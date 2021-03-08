@@ -6,15 +6,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.Scanner;
 
 public class MyAccountController implements Initializable {
-    private String name;
-    private String lastName;
-    private String birthday;
-    private int age;
-    private String email;
     private String password;
 
     @FXML
@@ -39,14 +37,33 @@ public class MyAccountController implements Initializable {
     private Label emailLabel;
 
     @FXML
+    private Label telLabel;
+
+    @FXML
     private Label passwordLabel;
+
+    private void setCurrentUser(){
+        try{
+            Scanner scanner  = new Scanner(new File("CurrentUser"));
+            nameLabel.setText(scanner.nextLine());
+            LastNameLabel.setText(scanner.nextLine());
+            telLabel.setText(scanner.nextLine());
+            emailLabel.setText(scanner.nextLine() + "@gmail.com");
+            password = scanner.nextLine();
+            scanner.close();
+        }
+        catch (FileNotFoundException ex){
+            System.out.print(ex.getMessage());
+        }
+    }
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        setCurrentUser();
 
         btnShowPassword.setOnAction(event -> {
-
+            passwordLabel.setText(password);
         });
     }
 

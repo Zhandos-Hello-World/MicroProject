@@ -62,6 +62,8 @@ public class RegisterController implements Initializable {
     private Button cancelButton;
     @FXML
     private Label messageIncorrectBirthday;
+    @FXML
+    private Label showIncorrectPassword;
 
     @FXML
     void Cancel() {
@@ -88,7 +90,7 @@ public class RegisterController implements Initializable {
 
     @FXML
     public void btnCreate(){
-        if(checkNameText(nameText.getText()) && checkLastNameText(lastNameText.getText()) && checkNumberText(numberText.getText()) && emailTextCheck(emailText.getText())){
+        if(checkNameText(nameText.getText()) && checkLastNameText(lastNameText.getText()) && checkNumberText(numberText.getText()) && emailTextCheck(emailText.getText()) && password(passwordText.getText())){
             File filepath = new File("CurrentUser");
             try {
                 PrintWriter pw = new PrintWriter(filepath);
@@ -96,12 +98,24 @@ public class RegisterController implements Initializable {
                 pw.println(lastNameText.getText());
                 pw.println(numberText.getText());
                 pw.println(emailText.getText());
+                pw.println(passwordText.getText());
                 //password and birthday
                 pw.println(checkMF);
                 pw.println();
                 pw.close();
+                Parent root = FXMLLoader.load(getClass().getResource("/sample/Intro.fxml"));
+                Scene scene = new Scene(root);
+                Stage stage = new Stage();
+                stage.setScene(scene);
+                stage.setResizable(false);
+                stage.setTitle("IZI");
+                stage.show();
+                Cancel();
             }catch (FileNotFoundException ex){
                 System.out.print(ex.getMessage());
+            }
+            catch (IOException EX){
+                EX.printStackTrace();
             }
         }
 
@@ -133,7 +147,6 @@ public class RegisterController implements Initializable {
             return false;
         }
     }
-    //problem
     private boolean checkLastNameText(String name){
         boolean check = true;
         for(int i = 0; i < name.length(); i++){
@@ -177,12 +190,24 @@ public class RegisterController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         //birthday for controlling 3 MenuButtons
-        bithday();
+        birthday();
         //maleOrFemale for controlling 2 RadioButtons
         maleOrFemale();
         // install value for MaleRadioButton and FemaleRadioButton
 
     }
+    private boolean password(String password){
+        if(password.length() > 8){
+            showIncorrectPassword.setText("Correct");
+            return true;
+        }
+        else{
+            showIncorrectPassword.setText("Incorrect");
+            return false;
+        }
+    }
+
+
     private void maleOrFemale(){
         ToggleGroup MF = new ToggleGroup();
         MaleRadioButton.setToggleGroup(MF);
@@ -197,7 +222,7 @@ public class RegisterController implements Initializable {
 
 
 
-    private void bithday(){
+    private void birthday(){
         //Create menuItems for menuButtons
         //year
         MenuItem []yearItem = new MenuItem[120];
